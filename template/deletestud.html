@@ -24,10 +24,17 @@
       <td>{{ student.section }}</td>
       <td><img src="{{ student.image.url }}" style="height: 50px; width: 50px;" /></td>
       <br>
-      <td><a href="/deletestud/{{student.studentid}}">DELETE</a></td>
+      <td><a href="/deletestud/{{student.studentid}}" onclick="showAlert()">DELETE</a></td>
       <td><a href="/editstud/{{student.studentid}}">EDIT</a></td>
     </tr>
     {% endfor %}
   </table>
 </body>
+<script>
+  function showAlert(event) {
+    event.preventDefault();
+    alert('Deleted Successfully');
+    window.location.href = "viewstud.html";
+  }
+</script>
 </html>

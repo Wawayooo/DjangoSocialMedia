@@ -111,8 +111,8 @@ input[type="submit" i]:hover{
 }
 
 .profile{
-  height: 110px;
-  width: 110px;
+  height: 120px;
+  width: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,10 +125,10 @@ input[type="submit" i]:hover{
 }
 
 #imgProfile{
-  height: 100px;
-  width: 100px;
+  height: 111px;
+  width: 111px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 7%;
   position: absolute;
 }
 

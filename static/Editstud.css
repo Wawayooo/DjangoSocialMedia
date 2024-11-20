@@ -162,6 +162,7 @@ input[type="submit"]:hover {
   border-radius: 50%;
   position: relative;
   margin-top: 12px;
+  left: 27px;
 }
 
 .image-box,
@@ -242,4 +243,9 @@ input[type="submit"]:hover {
 #changepicBtn:hover{
   filter: drop-shadow(2px 4px 6px black);
   cursor: pointer;
+}
+
+#imageFile{
+  position: relative;
+  top: 500px;
 }

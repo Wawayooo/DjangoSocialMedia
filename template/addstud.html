@@ -15,7 +15,7 @@
         <div class="profile">
           <img src="/media/img/ssss.png" alt="" id="imgProfile">
         </div>
-        <input type="submit" value="Add Student">
+        <input type="submit" value="Add Student" onclick="showAlert()">
       </form>
     </div>
     <a href="{% url 'home' %}" class="go-back">GO BACK TO HOMEPAGE</a>
@@ -29,5 +29,9 @@
   btn.addEventListener('change', () => {
     img.src = URL.createObjectURL(btn.files[0]);
   })
+
+  function showAlert() {
+    alert("Successfully Added a New Student");
+  }
 </script>
 </html>

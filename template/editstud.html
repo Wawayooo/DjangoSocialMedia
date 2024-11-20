@@ -25,8 +25,7 @@
       <input type="text" name="student_name" value="{{data.student_name}}">
       <input type="text" name="course" value="{{data.course}}">
       <input type="text" name="section" value="{{data.section}}">
-      <input type="hidden" name="image" value="{{data.image.url}}" id="imgProfile">
-      <input type="hidden" name="image_file" id="imageFile">
+      <input type="file" name="image" id="imageFile">
       <div class="Form">
         {{ form }}
       </div>
@@ -44,6 +43,7 @@
     let btn = document.getElementById('changepicBtn');
     let img = document.getElementById('imagePic');
     let imageFile = document.getElementById('imageFile');
+    let image = document.getElementById('imgProfile');
 
     btn.addEventListener('change', () => {
       let file = btn.files[0];
