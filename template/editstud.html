@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Student Records</title>
+  <link rel="stylesheet" href="/static/Editstud.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="image-box">
+        <img src="{{data.image.url}}" alt="" class="image" id="imagePic">
+      </div>
+      <div class="content-box">
+        <div class="content">
+          <input type="file" id="changepicBtn">
+        </div>
+      </div>
+    </div>
+
+    <form action="/updatestud/{{data.studentid}}/" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="hidden" name="id" value="{{data.studentid}}">
+      <input type="text" name="student_name" value="{{data.student_name}}">
+      <input type="text" name="course" value="{{data.course}}">
+      <input type="text" name="section" value="{{data.section}}">
+      <input type="hidden" name="image" value="{{data.image.url}}" id="imgProfile">
+      <input type="hidden" name="image_file" id="imageFile">
+      <div class="Form">
+        {{ form }}
+      </div>
+      <input type="submit" value="Update" id="submit" onclick="showAlert()">
+    </form>
+  </div>
+  <a href="{% url 'viewstud' %}" class="view">VIEW RECORDS</a>
+  <a href="{% url 'home' %}" class="home">HOMEPAGE</a>
+
+  <script>
+    function showAlert() {
+      alert("Successfully Updated the Record");
+    }
+
+    let btn = document.getElementById('changepicBtn');
+    let img = document.getElementById('imagePic');
+    let imageFile = document.getElementById('imageFile');
+
+    btn.addEventListener('change', () => {
+      let file = btn.files[0];
+      if (file) {
+        img.src = URL.createObjectURL(file);
+        imageFile.files = btn.files;
+      }
+    });
+  </script>
+</body>
+</html>

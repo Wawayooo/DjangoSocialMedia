@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGIN PAGE</title>
+  <link rel="stylesheet" href="/static/Login.css">
+</head>
+<body>
+    <div class="container">
+      <h1>LOG-IN YOUR ACCOUNT</h1>
+      <form action="" method="post">
+        {%csrf_token%}
+        <input type="text" name="username" id="username" placeholder="Enter Your Username" style="font-family: fantasy; font-size: 20px;">
+        <input type="password" name="password" id="pass" placeholder="Enter Your Password" style="font-family: fantasy; font-size: 20px;">
+        <input type="submit" value="LOGIN" id="submit">
+      </form>
+      <a href="{%url 'signup' %}">Don't Have an Account</a>
+    </div>
+</body>
+</html>

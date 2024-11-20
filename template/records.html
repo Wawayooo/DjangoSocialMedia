@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/static/records.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <main>
+    <nav class="main-menu">
+      <div>
+        <div class="user-info">
+          <img src="/media/img/japee.jpg" alt="user" />
+          <p>Jasper Love Jessel</p>
+        </div>
+        <ul>
+          <li class="nav-item active">
+            <a href="#">
+              <i class="fa fa-map nav-icon"></i>
+              <span class="nav-text">Discover</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#">
+              <i class="fa fa-arrow-trend-up nav-icon"></i>
+              <span class="nav-text">Trending</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#">
+              <i class="fa fa-compact-disc nav-icon"></i>
+              <span class="nav-text">Album</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#">
+              <i class="fa fa-circle-play nav-icon"></i>
+              <span class="nav-text">Playlist</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#">
+              <i class="fa fa-heart nav-icon"></i>
+              <span class="nav-text">Favorites</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <ul>
+        <li class="nav-item">
+          <a href="#">
+            <i class="fa fa-user nav-icon"></i>
+            <span class="nav-text">Profile</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#">
+            <i class="fa fa-gear nav-icon"></i>
+            <span class="nav-text">Settings</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#">
+            <i class="fa fa-right-from-bracket nav-icon"></i>
+            <span class="nav-text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="content">
+      <div class="left-content">
+        <div class="albums">
+          <h1>Recommended Albums</h1>
+          <div class="album-container containers">
+            <div class="album">
+              <div class="album-frame">
+                <img
+                  src="../media/img/OIP (4).jpg"
+                  alt="" />
+              </div>
+              <div>
+                <h2>The Death of Slim Shady</h2>
+                <p>Eminem</p>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-frame">
+                <img
+                  src="../media/img/khalid.jpg"
+                  alt="" />
+              </div>
+              <div>
+                <h2>Sincere</h2>
+                <p>Khalid</p>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-frame">
+                <img
+                  src="../media/img/one_D.jpg"
+                  alt="" />
+              </div>
+              <div>
+                <h2>Midnight Memories</h2>
+                <p>One Direction</p>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-frame">
+                <img
+                  src="../media/img/kend.jpg"
+                  alt="" />
+              </div>
+              <div>
+                <h2>Be Humble</h2>
+                <p>Kendrick Lamar</p>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-frame">
+                <img
+                  src="../media/img/roddy.png"
+                  alt="" />
+              </div>
+              <div>
+                <h2>The Box</h2>
+                <p>Roddy Rich</p>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-frame">
+                <img
+                  src="../media/img/just.jpg"
+                  alt="" />
+              </div>
+              <div>
+                <h2>Ghost</h2>
+                <p>Justin Bieber</p>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-frame">
+                <img
+                  src="../media/img/Ed-Sheeran.jpg"
+                  alt="" />
+              </div>
+              <div>
+                <h2>Perfect</h2>
+                <p>Ed Sheeran</p>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-frame">
+                <img
+                  src="../media/img/lany.jpg"
+                  alt="" />
+              </div>
+              <div>
+                <h2>Mean It</h2>
+                <p>Lany</p>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-frame">
+                <img
+                  src="../media/img/shawn.jpg"
+                  alt="" />
+              </div>
+              <div>
+                <h2>Treat You Better</h2>
+                <p>Shawn Mendes</p>
+              </div>
+            </div>
+
+            <div class="album">
+              <div class="album-frame">
+                <img
+                  src="../media/img/RoBru.png"
+                  alt="" />
+              </div>
+              <div>
+                <h2>APT</h2>
+                <p>Bruno Mars & Rose</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="music-player">
+        <div class="album-cover">
+          <img src="/media/img/james_arthur_can_i_be_him-portada.jpg" id="rotatingImage" alt="" />
+          <span class="point"></span>
+        </div>
+
+        <h2>Can I Be Him</h2>
+        <p>James Arthur</p>
+
+        <audio id="song">
+          <source src="/static/music/James_Arthur_-_Can_I_Be_Him__Lyric_Video_(256k).mp3" type="audio/mpeg" />
+        </audio>
+
+        <input type="range" value="0" id="progress" />
+
+        <div class="controls">
+          <button class="backward">
+            <i class="fa-solid fa-backward"></i>
+          </button>
+          <button class="play-pause-btn">
+            <i class="fa-solid fa-play" id="controlIcon"></i>
+          </button>
+          <button class="forward">
+            <i class="fa-solid fa-forward"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const navItems = document.querySelectorAll(".nav-item");
+
+    navItems.forEach((navItem) => {
+      navItem.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const activeItem = document.querySelector(".nav-item.active");
+        if (activeItem) {
+          activeItem.classList.remove("active");
+        }
+
+        navItem.classList.add("active");
+      });
+    });
+
+    const containers = document.querySelectorAll(".containers");
+
+    containers.forEach((container) => {
+      let isDragging = false;
+      let startX;
+      let scrollLeft;
+
+      container.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+      });
+
+      container.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+
+        const x = e.pageX - container.offsetLeft;
+        const step = (x - startX) * 0.6;
+        container.scrollLeft = scrollLeft - step;
+      });
+
+      container.addEventListener("mouseup", () => {
+        isDragging = false;
+      });
+
+      container.addEventListener("mouseleave", () => {
+        isDragging = false;
+      });
+    });
+
+    const progress = document.getElementById("progress");
+    const song = document.getElementById("song");
+    const controlIcon = document.getElementById("controlIcon");
+    const playPauseButton = document.querySelector(".play-pause-btn");
+    const forwardButton = document.querySelector(".controls button.forward");
+    const backwardButton = document.querySelector(".controls button.backward");
+    const rotatingImage = document.getElementById("rotatingImage");
+    const songName = document.querySelector(".music-player h2");
+    const artistName = document.querySelector(".music-player p");
+
+    let rotating = false;
+    let currentRotation = 0;
+    let rotationInterval;
+
+    const songs = [
+      {
+        title: "Can I Be Him",
+        name: "James Arthur",
+        source:
+          "/static/music/James_Arthur_-_Can_I_Be_Him__Lyric_Video_(256k).mp3",
+        cover:
+          "/media/img/james_arthur_can_i_be_him-portada.jpg",
+      }
+    ];
+
+    let currentSongIndex = 0;
+
+    function startRotation() {
+      if (!rotating) {
+        rotating = true;
+        rotationInterval = setInterval(rotateImage, 50);
+      }
+    }
+
+    function pauseRotation() {
+      clearInterval(rotationInterval);
+      rotating = false;
+    }
+
+    function rotateImage() {
+      currentRotation += 1;
+      rotatingImage.style.transform = `rotate(${currentRotation}deg)`;
+    }
+
+    function updateSongInfo() {
+      songName.textContent = songs[currentSongIndex].title;
+      artistName.textContent = songs[currentSongIndex].name;
+      song.src = songs[currentSongIndex].source;
+      rotatingImage.src = songs[currentSongIndex].cover;
+
+      song.addEventListener("loadeddata", function () { });
+    }
+
+    song.addEventListener("loadedmetadata", function () {
+      progress.max = song.duration;
+      progress.value = song.currentTime;
+    });
+
+    song.addEventListener("ended", function () {
+      currentSongIndex = (currentSongIndex + 1) % songs.length;
+      updateSongInfo();
+      playPause();
+    });
+
+    song.addEventListener("timeupdate", function () {
+      if (!song.paused) {
+        progress.value = song.currentTime;
+      }
+    });
+
+    function playPause() {
+      if (song.paused) {
+        song.play();
+        controlIcon.classList.add("fa-pause");
+        controlIcon.classList.remove("fa-play");
+        startRotation();
+      } else {
+        song.pause();
+        controlIcon.classList.remove("fa-pause");
+        controlIcon.classList.add("fa-play");
+        pauseRotation();
+      }
+    }
+
+    playPauseButton.addEventListener("click", playPause);
+
+    progress.addEventListener("input", function () {
+      song.currentTime = progress.value;
+    });
+
+    progress.addEventListener("change", function () {
+      song.play();
+      controlIcon.classList.add("fa-pause");
+      controlIcon.classList.remove("fa-play");
+      startRotation();
+    });
+
+    forwardButton.addEventListener("click", function () {
+      currentSongIndex = (currentSongIndex + 1) % songs.length;
+      updateSongInfo();
+      playPause();
+    });
+
+    backwardButton.addEventListener("click", function () {
+      currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+      updateSongInfo();
+      playPause();
+    });
+
+    updateSongInfo();
+
+    var swiper = new Swiper(".swiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      speed: 600,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 10,
+        stretch: 120,
+        depth: 200,
+        modifier: 1,
+        slideShadows: false,
+      },
+      on: {
+        click(event) {
+          swiper.slideTo(this.clickedIndex);
+        },
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+  </script>
+</body>
+
+</html>

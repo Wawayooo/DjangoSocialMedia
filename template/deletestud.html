@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Student Records</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Employee Id</th>
+      <th>Employee Name</th>
+      <th>Designation</th>
+      <th>Salary</th>
+      <th>Image</th>
+      <th></th>
+      <th></th>
+    </tr>
+    {% for student in students %}
+    <tr>
+      <td>{{ student.studentid }}</td>
+      <td>{{ student.student_name }}</td>
+      <td>{{ student.course }}</td>
+      <td>{{ student.section }}</td>
+      <td><img src="{{ student.image.url }}" style="height: 50px; width: 50px;" /></td>
+      <br>
+      <td><a href="/deletestud/{{student.studentid}}">DELETE</a></td>
+      <td><a href="/editstud/{{student.studentid}}">EDIT</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

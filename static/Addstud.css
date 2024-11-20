@@ -1,0 +1,151 @@
+body{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vh;
+  background-image: url('/media/img/republic-of-gamers.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.container{
+  width: 100%;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 20px cyan;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 395px;
+  border-radius: 10px;
+}
+
+.go-back{
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  transform: translate(58px, 256px);
+  cursor: pointer;
+}
+
+.go-back:hover{
+  filter: drop-shadow(0px 0px 20px black);
+}
+
+.button-link { 
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: black;
+  background-color: unset;
+  text-align: center;
+  text-decoration: underline;
+  border-radius: 5px;
+  position: relative;
+  bottom: 515px;
+  left: 476px;
+  width: 114px;
+  height: 18px;
+  filter: drop-shadow(2px 4px 6px black);
+
+} 
+
+input[type="submit" i] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: black;
+  background-color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  position: relative;
+  bottom: -36px;
+  box-shadow: 0px 0px 20px white;
+} 
+input[type="submit" i]:hover{
+  background-color: #81a7cf;
+  cursor: pointer;
+}
+
+.form-box{
+  width: 516px;
+  height: 409px;
+  background-color: #12afe4;
+  box-shadow: 30px 30px 20px rgba(0, 0, 0, 0.5);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 35px;
+  border-radius: 10px;
+}
+
+#id_student_name{
+  width: 236px;
+  height: 25px;
+}
+
+#id_course{
+  width: 236px;
+  height: 25px;
+  position: relative;
+  left: 42px;
+}
+
+#id_section{
+  width: 236px;
+  height: 25px;
+  position: relative;
+  left: 37px;
+}
+
+#id_img{
+  width: 236px;
+  height: 25px;
+  position: relative;
+  left: 37px;
+}
+
+.profile{
+  height: 110px;
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 7%;
+  position: absolute;
+  transform: translate(306px, 92px);
+  background-image: url('/media/img/republic-of-gamers.jpg');
+  background-size: contain;
+}
+
+#imgProfile{
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#id_image{
+  right: -24px;
+  height: 26px;
+  width: 91px;
+  position: relative;
+  background-color: transparent;
+  padding-left: 4px;
+  padding-top: 5px;
+  box-shadow: 0px 0px 20px black;
+  filter: drop-shadow(2px 4px 6px cyan);
+}
+
+h1{
+  position: relative;
+  font-size: 15px;
+  top: 20px;
+}

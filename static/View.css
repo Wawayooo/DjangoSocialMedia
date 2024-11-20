@@ -1,0 +1,87 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #9f9191;
+  margin: 0;
+  padding: 20px;
+  background-image: url('/media/img/asus-rog-abstract.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Table container with glowing shadow */
+.table-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(2, 34, 69, 0.5);
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: -130px;
+  box-shadow: 0px 0px 20px black;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 12px;
+}
+
+th {
+  background-color: #1a2f46;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Image styles */
+img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+/* Link button styles */
+a {
+  display: inline-block;
+  padding: 8px 12px;
+  color: #fff;
+  background-color: #1a2f46;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+a:hover {
+  background-color: #1a2f46;
+}
+
+td{
+  font-size: 20px;
+  color: blanchedalmond;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.home{
+  background-color: #2d4a69;
+  position: relative;
+  left: 5px;
+  width: 150px;
+}
+
+.home:hover{
+  cursor: pointer;
+  background-color: crimson;
+}
+
+tr:nth-child(even) {
+  background-color: black;
+}

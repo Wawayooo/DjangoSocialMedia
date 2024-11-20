@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #image{
+      height: 150px;
+      width: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+  <img src="/media/img/ssss.png" alt="" id="image">
+  <input type="file" id="fileinput">
+</body>
+<script>
+  let btn = document.getElementById('fileinput');
+  let img = document.getElementById('image');
+
+  btn.addEventListener('change', () => {
+    img.src = URL.createObjectURL(btn.files[0]);
+  })
+</script>
+</html>

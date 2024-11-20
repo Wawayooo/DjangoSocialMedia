@@ -1,0 +1,14 @@
+h1{
+  background-color: aqua;
+}
+
+body{
+  background-color: brown;
+}
+
+img{
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
