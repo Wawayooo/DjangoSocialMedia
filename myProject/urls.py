@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 from WebBuilder.views import deletestud, updatestud
 
 urlpatterns = [
+    #eme
     #path('', loginpage, name=''),
     path('admin/', admin.site.urls),
     path('signup/', signup, name='signup'),  # Changed path from '' to 'signup/'
