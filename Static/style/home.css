@@ -1,0 +1,157 @@
+body{
+  background: #EEC3C2;
+}
+
+.container {
+  width: 80%;
+  margin:auto;
+  background:linear-gradient(45deg,#4A2720,#4A2720);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  filter: drop-shadow(0px 0px 8px black);
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.section a {
+  text-decoration: none;
+  color: #fff;
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.section a:hover {
+  color: black;
+  background-color: #EEC3C2;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.postContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.post {
+  background-color: #EEC3C2;
+  border-radius: 10px;
+  padding: 20px;
+  width: 70%;
+  height: 50%;
+  max-height: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 40px;
+  overflow: auto;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+}
+
+.capTion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: white;
+}
+
+#Caption{
+  font-size: 25px;
+  font-family: 'Bookman Old Style';
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.postCon {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top:20px;
+  margin-bottom: 10px;
+  width: 54%;
+  height: 85%;
+  top: 56px;
+  right: 160px;
+}
+
+.defaultimgBox{
+  height: 400px;
+  width: 400px;
+  position: relative;
+  display: flex;
+  left: 210px;
+}
+.defaultimgBox img{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.imgBox{
+  height: 400px;
+  width: 400px;
+  position: relative;
+  display: flex;
+  left: 210px;
+}
+
+.imgBox img{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+#reactBtn{
+  width: 72px;
+  height: 72px;
+  position: relative;
+  bottom: 99px;
+  border-radius: 50%;
+  font-size: 49px;
+  filter: drop-shadow(2px  4px 6px black);
+  left: 350px;
+}
+
+.reactions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  position: relative;
+  left: 350px;
+  bottom: 94px;
+}
+
+.reactions form button {
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #ff0000;
+  transition: color 0.3s ease;
+}
+
+.reactions form button:hover {
+  color: #cc0000;
+}
+
+.reactions span {
+  font-size: 16px;
+  color: #777;
+}

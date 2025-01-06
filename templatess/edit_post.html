@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Post</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style/editPost.css' %}">
+</head>
+<body>
+    <h1>Edit Post</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+        <a style="top: -450px;font-size:25px; right:100px;" href="{% url 'profile' %}">Cancel Update</a>
+    </form>
+</body>
+</html>

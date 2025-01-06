@@ -1,0 +1,112 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(5deg, white, yellow, orange, white);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  transform: translate(38px, -400px);
+}
+
+/* Form container */
+form {
+  background: linear-gradient(45deg, black, orange, black);
+  padding: 120px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  margin: auto;
+  transform: translate(-31px, 20px);
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #87CEEB;
+  color: #000000;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00BFFF;
+}
+
+/* Delete button with confirmation */
+form[action*="delete_profile"] button {
+  background-color: #DC143C;
+}
+
+form[action*="delete_profile"] button:hover {
+  background-color: #B22222;
+}
+
+#del_button{
+  color: black;
+}
+
+#del_button_div{
+  transform: translate(110px, -300px);
+}
+
+#del_button:hover{
+  background-color: white;
+  color: red;
+}
+
+form p{
+  width: 95%;
+}
+
+.btn{
+  height: 15px;
+  width: 80px;
+  background: linear-gradient(45deg, black, orange, black);
+  box-shadow: 0px 0px 15px black;
+  padding: 6px;
+  position: fixed;
+  transform: translate(270px, 0px);
+  font-size: 15px;
+}
+
+a{
+  color: black;
+  font-size: 15px;
+  margin-left: 11%;
+  font-weight: bold;
+  position: relative;
+}
+
+a:hover{
+  color: green;
+}

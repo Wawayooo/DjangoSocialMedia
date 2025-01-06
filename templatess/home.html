@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style/home.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <a href="{% url 'create_post' %}" id="createPost">Create a Post</a>
+            <a href="{% url 'profile' %}" id="GoHome">Go to Profile</a>
+        </div>
+        <h1 style="font-size: 40px; margin-bottom:50px;">"HOMEPAGE"</h1>
+        <div class="postContent">
+            {% for post in posts %}
+                <div class="post">
+                    <p style="color: black; margin-left: 50px;">
+                        Posted by:
+                        {% if post.user %}
+                            {% if post.user.userprofile.full_name == request.user.userprofile.full_name %}
+                                <span style="font-size: 25px; color:black; margin-top:50px; margin-left:20px;">You</span>
+                            {% else %}
+                                <a style="font-size: 25px; color:black; margin-top:50px; margin-left:20px;" href="{% url 'user_profile' post.user.id %}">{{ post.user.userprofile.full_name }}</a>
+             
+                            {% endif %}
+                        {% else %}
+                            Unknown
+                        {% endif %}
+                    </p>
+                    <p id="Caption">{{ post.caption }}</p>
+                    <div class="capTion">
+                        <div class="postCon">
+                            {% if post.image %}
+                                <div class="imgBox">
+                                    <img style="border-radius:5%; filter:drop-shadow(0px 0px 18px black)"  src="{{ post.image.url }}" alt="Post Image">
+                                </div>
+                            {% else %}
+                                <div class="defaultimgBox">
+                                    <img style="border-radius:50%; filter:drop-shadow(0px 0px 18px black)" src="{% static 'Media/img/none.png' %}" alt="Default Image">
+                                </div>
+                            {% endif %}
+                        </div>
+                        <form method="post" action="{% url 'toggle_heart' post.id %}">
+                            {% csrf_token %}
+                            <button id="reactBtn" type="submit">{% if request.user in post.heart_reactions.all %}❤︎{% else %}♡{% endif %}</button>
+                        </form>
+ 
+                        <div class="reactions">
+                            <span style="color: black; font-size:25px;">{{ post.heart_reactions.count }} Likes</span>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+

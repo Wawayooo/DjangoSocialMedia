@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style/user_profile.css' %}">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <img src="{% if profile_user.userprofile.cover_photo %}{{ profile_user.userprofile.cover_photo.url }}{% else %}{% static 'Media/img/windowss.png' %}{% endif %}" alt="Cover Photo" id="coverPhoto">
+    <img src="{% if profile_user.userprofile.profile_picture %}{{ profile_user.userprofile.profile_picture.url }}{% else %}{% static 'Media/img/ssss.png' %}{% endif %}" alt="Profile Picture" id="img_Profile">
+    <div class="container">
+        <h1 style="color:black;font-size: 18px; position:relative; bottom: 80px;left:160px;">Username: {{ profile_user.username }}</h1>
+        <p id="fnameP">{{ profile_user.userprofile.full_name }}</p>
+        <p id="bio">Bio: {{ profile_user.userprofile.bio }}</p>
+        <p style="position: relative; bottom: 110px;">Email: {{ profile_user.email }}</p>
+    </div>
+    <div class="postContent">
+        <div class="section">
+            <a href="{% url 'home' %}" id="GoHome">Go to Homepage</a>
+            <a href="{% url 'login' %}" id="Logout">Logout</a>
+        </div>
+        <div class="capTion">
+            <h2>{{ profile_user.userprofile.full_name }}'s Posts</h2>
+            {% for post in posts %}
+                <div class="post">
+                    <p style="font-size: 25px;color:black;">{{ post.caption }}</p>
+                    {% if post.image %}
+                        <img id="postImg" src="{{ post.image.url }}" alt="Post Image">
+                    {% endif %}
+                    <p>Posted on: {{ post.created_at }}</p>
+                    <a id="view" href="{% url 'post_detail' post.id %}" style="margin-left: 30px;">View</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

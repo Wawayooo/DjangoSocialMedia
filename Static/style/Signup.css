@@ -1,0 +1,125 @@
+body {
+  color: black;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background:  #4A2720;
+}
+
+*{
+  color:white;
+}
+
+.form-container {
+  padding: 36px 220px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px white;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  left: 150px;
+  background: black;
+}
+
+.form-container label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+#submit {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: black;
+  color: #e0e0e0;
+}
+
+#id_username
+{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: black;
+  color: #e0e0e0;
+}
+
+#id_first_name, #id_middle_name, #id_last_name
+{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: black;
+  color: #e0e0e0;
+}
+
+#id_email{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: black;
+  color: #e0e0e0;
+}
+
+#id_password1{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: black;
+  color: #e0e0e0;
+}
+
+#id_password2{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: black;
+  color: #e0e0e0;
+}
+
+
+#submit:hover {
+  background-color: #3700b3;
+}
+
+.helptext {
+  font-size: 12px;
+  color: #bdbdbd;
+  margin-bottom: 10px;
+}
+
+.go-to {
+  color:white;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  position: relative;
+  top: -390px;
+  right: 990px;
+  font-size: 24px;
+  font-family: fangsong;
+  filter: drop-shadow(2px 3px 0px black);
+}
+
+.go-to:hover {
+  text-decoration: underline;
+}

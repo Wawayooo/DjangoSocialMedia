@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Post</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style/createPost.css' %}">
+</head>
+<body>
+    <div class="section">
+        <h1>Create Post</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit Post</button>
+        </form>
+        <a href="{% url 'home' %}">Back to Home</a>
+
+        <div class="postContainer" id="postcon">
+            <div class="imgHold">
+                <img src="../static/Media/img/ssss.png" alt="" id="postImg">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const imgInput = document.querySelector('input[name="image"]');
+            const postImg = document.getElementById('postImg');
+            const postcon = document.getElementById('postcon')
+
+            imgInput.addEventListener('change', function () {
+                const file = imgInput.files[0];
+                if (file) {
+                    postImg.src = URL.createObjectURL(file);
+                    postcon.style.opacity = 1;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

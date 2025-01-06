@@ -1,0 +1,123 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #4A2720;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  transform: translate(38px, -400px);
+}
+
+/* Form container */
+form {
+  background:linear-gradient(45deg,#4A2720,black,#4A2720);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  margin: auto;
+  transform: translate(-120px, 20px);
+  filter: drop-shadow(2px 4px 6px white);
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #87CEEB;
+  color: #000000;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00BFFF;
+}
+
+/* Delete button with confirmation */
+form[action*="delete_profile"] button {
+  background-color: #DC143C;
+}
+
+form[action*="delete_profile"] button:hover {
+  background-color: #B22222;
+}
+
+#del_button{
+  color: black;
+}
+
+#del_button_div{
+  transform: translate(110px, -300px);
+}
+
+#del_button:hover{
+  background-color: white;
+  color: red;
+}
+
+form p{
+  width: 95%;
+}
+
+.btn2 {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  position: inherit;
+  position: fixed;
+  transform: translate(-172px, -364px);
+}
+
+.btn2:hover {
+  background-color: white;
+  color: black;
+}
+
+a{
+  color: black;
+  font-size: 15px;
+  margin-left: 11%;
+  font-weight: bold;
+}
+
+a:hover{
+  color: green;
+}

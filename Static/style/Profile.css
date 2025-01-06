@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background:linear-gradient(45deg,black,#EEC3C2,#4A2720,#EEC3C2,black);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#coverPhoto {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+#img_Profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  position: relative;
+  top: -75px;
+  background-color: white;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  margin-top: -75px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+#fnameP, #bio, #bio, p {
+  font-size: 18px;
+  color: #666;
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.postContent {
+  width: 80%;
+  background-color: white;
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.post {
+  margin-bottom: 20px;
+}
+
+.capTion h2 {
+  color: #333;
+}
+
+#view {
+  color: #007BFF;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#view:hover {
+  text-decoration: underline;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+}
+
+#GoHome, #Logout {
+  margin: 0 10px;
+}

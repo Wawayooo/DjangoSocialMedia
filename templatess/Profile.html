@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style/Profile.css' %}">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <img src="{% if user.userprofile.cover_photo %}{{ user.userprofile.cover_photo.url }}{% else %}{% static 'Media/img/windowss.png' %}{% endif %}" alt="Cover Photo" id="coverPhoto">
+    <img src="{% if user.userprofile.profile_picture %}{{ user.userprofile.profile_picture.url }}{% else %}{% static 'Media/img/ssss.png' %}{% endif %}" alt="Profile Picture" id="img_Profile">
+    <div class="container">
+        <h1 style="color:black;font-size: 18px; position:relative; bottom: 80px;left:160px;">Username: {{ user.username }}</h1>
+        <p id="fnameP">{{ user.userprofile.full_name }}</p>
+        <p id="bio">Bio: {{ user.userprofile.bio }}</p>
+        <p style="position: relative; bottom: 110px;">Email: {{ user.email }}</p>
+        <a href="{% url 'profile_settings' %}">Edit Profile</a>
+    </div>
+    <div class="postContent">
+        <div class="section">
+            <a href="{% url 'home' %}" id="GoHome">Go to Homepage</a>
+            <a href="{% url 'login' %}" id="Logout">Logout</a>
+        </div>
+        <div class="capTion">
+            <h2>Your Posts</h2>
+            {% for post in posts %}
+                <div class="post">
+                    <p style="font-size: 25px;color:black;">{{ post.caption }}</p>
+                    <a id="view" href="{% url 'post_detail' post.id %}" style="margin-left: 30px;">View</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Settings</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style/profile_settings.css' %}">
+</head>
+<body>
+    <div class="btn">
+        <a class="btn2" href="{% url 'profile' %}">Go Back</a>
+    </div>
+    <h1>Edit Profile</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+        <form id="del_button_div" method="post" action="{% url 'delete_profile' %}">
+            {% csrf_token %}
+            <button id="del_button" type="submit" onclick="return confirm('Are you sure you want to delete your profile?');">Delete Account</button>
+        </form>
+    </form>
+</body>
+</html>
