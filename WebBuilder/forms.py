@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from .models import UserProfile, Post
+from .models import UserProfile, Post, Comment
 from django.contrib.auth.models import User
 
 class UserProfileForm(forms.ModelForm):
@@ -26,6 +26,11 @@ class SignupForm(UserCreationForm):
 class UserLoginForm(AuthenticationForm):
     username = forms.CharField(max_length=254)
     password = forms.CharField(widget=forms.PasswordInput)
+    
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['comment']
 
 
 

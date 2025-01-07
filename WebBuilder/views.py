@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import SignupForm, UserLoginForm, UserProfileForm, PostForm
-from .models import UserProfile, Post,FriendRequest
+from .forms import SignupForm, UserLoginForm, UserProfileForm, PostForm, CommentForm
+from .models import UserProfile, Post,FriendRequest,Comment
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -85,8 +85,9 @@ def logout_view(request):
 
 @login_required
 def home(request):
-    posts = Post.objects.all().prefetch_related('heart_reactions')
-    return render(request, 'home.html', {'posts': posts})
+    posts = Post.objects.all().prefetch_related('heart_reactions').order_by('-created_at')
+    comment_form = CommentForm()
+    return render(request, 'home.html', {'posts': posts, 'form': comment_form})
 
 @login_required
 def post_detail(request, post_id):
@@ -130,3 +131,38 @@ def toggle_heart(request, post_id):
 def post_detail(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     return render(request, 'Post.html', {'post': post})
+
+@login_required
+def add_comment(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.user = request.user
+            comment.post = post
+            comment.save()
+            return redirect('home')
+    else:
+        form = CommentForm()
+    return render(request, 'AddComment.html', {'form': form})
+
+@login_required
+def edit_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id, user=request.user)
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = CommentForm(instance=comment)
+    return render(request, 'edit_comment.html', {'form': form, 'comment': comment})
+
+@login_required
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id, user=request.user)
+    if request.method == 'POST':
+        comment.delete()
+        return redirect('home')
+    return render(request, 'profile.html', {'comment': comment})
