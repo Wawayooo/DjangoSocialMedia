@@ -31,7 +31,6 @@
                         <img id="postImg" src="{{ post.image.url }}" alt="Post Image">
                     {% endif %}
                     <p>Posted on: {{ post.created_at }}</p>
-                    <a id="view" href="{% url 'post_detail' post.id %}" style="margin-left: 30px;">View</a>
                 </div>
             {% endfor %}
         </div>
