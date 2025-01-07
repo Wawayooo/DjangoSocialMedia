@@ -17,20 +17,16 @@
                 <div class="post">
                     <p style="color: black; margin-left: 50px;">
                         Posted by:
-                        <div class="userBoxInfo">
-                            {% if post.user %}
-                                <div class="imgBox">
-                                    <img src="{{ post.user.userprofile.profile_picture.url }}" alt="Profile Picture" class="profile-picture" style="border-radius:50%; width:50px; height:50px; margin-right:10px;">
-                                </div>
-                                {% if post.user.userprofile.full_name == request.user.userprofile.full_name %}
-                                    <span style="font-size: 25px; color:black; margin-top:50px; margin-left:20px;">You</span>
-                                {% else %}
-                                    <a style="font-size: 25px; color:black; margin-top:50px; margin-left:20px;" href="{% url 'user_profile' post.user.id %}">{{ post.user.userprofile.full_name }}</a>
-                                {% endif %}
+                        {% if post.user %}
+                            <img src="{{ post.user.userprofile.profile_picture.url }}" alt="Profile Picture" class="profile-picture" style="border-radius:50%; width:50px; height:50px; margin-right:20px; position:relative; left:25px; top:15px;">
+                            {% if post.user.userprofile.full_name == request.user.userprofile.full_name %}
+                                <span style="font-size: 25px; color:black; margin-top:50px; margin-left:20px;">You</span>
                             {% else %}
-                                Unknown
+                                <a style="font-size: 25px; color:black; margin-top:50px; margin-left:20px;" href="{% url 'user_profile' post.user.id %}">{{ post.user.userprofile.full_name }}</a>
                             {% endif %}
-                        </div>
+                        {% else %}
+                            Unknown
+                        {% endif %}
                     </p>
                     <p id="Caption">{{ post.caption }}</p>
                     <div class="capTion">
@@ -54,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="toggleBtn" onclick="toggleBox(`box-{{ post.id }}`)">Toggle Comments</button>
+                <button class="toggleBtn" onclick="toggleBox(`box-{{ post.id }}`)"></button>
                 <div id="box-{{ post.id }}" class="box" style="display: none;">
                     <div class="CommentSection">
                         <div class="comments">
