@@ -16,14 +16,15 @@
             {% for post in posts %}
                 <div class="post">
                     <p style="color: black; margin-left: 50px;">
-                        Posted by:
                         {% if post.user %}
-                            <img src="{{ post.user.userprofile.profile_picture.url }}" alt="Profile Picture" class="profile-picture" style="border-radius:50%; width:50px; height:50px; margin-right:20px; position:relative; left:25px; top:15px;">
-                            {% if post.user.userprofile.full_name == request.user.userprofile.full_name %}
+                            <div class="boxImg">
+                                <img src="{{ post.user.userprofile.profile_picture.url }}" alt="Profile Picture" class="profile-picture" style="border-radius:50%; width:50px; height:50px; margin-right:20px; position:relative; left:25px; top:15px;">
+                                {% if post.user.userprofile.full_name == request.user.userprofile.full_name %}
                                 <span style="font-size: 25px; color:black; margin-top:50px; margin-left:20px;">You</span>
-                            {% else %}
-                                <a style="font-size: 25px; color:black; margin-top:50px; margin-left:20px;" href="{% url 'user_profile' post.user.id %}">{{ post.user.userprofile.full_name }}</a>
-                            {% endif %}
+                                {% else %}
+                                    <a style="font-size: 25px; color:black; margin-top:50px; margin-left:20px;" href="{% url 'user_profile' post.user.id %}">{{ post.user.userprofile.full_name }}</a>
+                                {% endif %}
+                            </div>
                         {% else %}
                             Unknown
                         {% endif %}
@@ -31,26 +32,32 @@
                     <p id="Caption">{{ post.caption }}</p>
                     <div class="capTion">
                         <div class="postCon">
-                            {% if post.image %}
-                                <div class="imgBox">
-                                    <img style="border-radius:5%; filter:drop-shadow(0px 0px 18px black)" src="{{ post.image.url }}" alt="Post Image">
-                                </div>
-                            {% else %}
-                                <div class="defaultimgBox">
-                                    <img style="border-radius:50%; filter:drop-shadow(0px 0px 18px black)" src="{% static 'Media/img/none.png' %}" alt="Default Image">
-                                </div>
-                            {% endif %}
+                            <div class="Image_Posted">
+                                {% if post.image %}
+                                    <div class="imgBox">
+                                        <img style="border-radius:5%; filter:drop-shadow(0px 0px 18px black)" src="{{ post.image.url }}" alt="Post Image">
+                                    </div>
+                                {% else %}
+                                    <div class="defaultimgBox">
+                                        <img style="border-radius:50%; filter:drop-shadow(0px 0px 18px black)" src="{% static 'Media/img/none.png' %}" alt="Default Image">
+                                    </div>
+                                {% endif %}
+                            </div>
                         </div>
-                        <form method="post" action="{% url 'toggle_heart' post.id %}">
-                            {% csrf_token %}
-                            <button id="reactBtn" type="submit">{% if request.user in post.heart_reactions.all %}❤︎{% else %}♡{% endif %}</button>
-                        </form>
-                        <div class="reactions">
-                            <span style="color: black; font-size:25px;">{{ post.heart_reactions.count }} Likes</span>
+                        <div class="Reaction_Div">
+                            <form method="post" action="{% url 'toggle_heart' post.id %}">
+                                {% csrf_token %}
+                                <button id="reactBtn" type="submit">{% if request.user in post.heart_reactions.all %}❤︎{% else %}♡{% endif %}</button>
+                            </form>
+                            <div class="reactions">
+                                <span style="color: black; font-size:25px;">{{ post.heart_reactions.count }} Likes</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <button class="toggleBtn" onclick="toggleBox(`box-{{ post.id }}`)"></button>
+                <div class="buttonDiv">
+                    <button class="toggleBtn" onclick="toggleBox(`box-{{ post.id }}`)"></button>
+                </div>
                 <div id="box-{{ post.id }}" class="box" style="display: none;">
                     <div class="CommentSection">
                         <div class="comments">
