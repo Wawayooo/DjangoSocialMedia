@@ -82,5 +82,6 @@ h1{
   position: absolute;
   transform: translate(175px, -252px);
   color: #333;
+  margin-bottom: 20px;
 }
 
