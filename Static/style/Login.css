@@ -76,10 +76,11 @@ a:hover {
 }
 
 h1{
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   position: absolute;
   transform: translate(175px, -252px);
-  color: white;
+  color: #333;
 }
+
