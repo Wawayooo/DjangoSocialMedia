@@ -71,6 +71,10 @@ a {
   transition: color 0.3s ease;
 }
 
+a:hover {
+  color: #fc5c7d;
+}
+
 h1{
   font-size: 28px;
   font-weight: bold;
