@@ -2,7 +2,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   font-family: Arial, sans-serif;
   background:linear-gradient(45deg,black,#EEC3C2,#4A2720,#EEC3C2,black);
   margin: 0;
