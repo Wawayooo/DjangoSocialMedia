@@ -1,5 +1,6 @@
 body{
-  background: #4A2720;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
   display: flex;
   justify-content: center;
   align-items: center;
