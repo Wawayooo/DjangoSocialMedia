@@ -45,20 +45,23 @@ body{
   width: 412px;
   border: solid 5px rgba(255, 255, 255, 0.4);
   position: absolute;
-  transform: translate(-137px, -30px);
+  transform: translate(-214px, -18px);
   box-shadow: 0px 0px 10px black;
+  border-radius: 25px;
 }
 
 #submit{
   height: 50px;
-  width: 423px;
+  width: 200px;
   background: black;
   color:black;
   position: absolute;
-  transform: translate(-137px, 70px);
+  transform: translate(-210px, 70px);
   font-size: 30px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   background-color: white;
+  border: solid 3px #fc5c7d;
+  border-radius: 25px;
 }
 #submit:hover{
   background-color: rgba(46, 38, 157, 0.5);
