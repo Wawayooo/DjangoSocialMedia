@@ -29,7 +29,10 @@ body{
   bottom: 50px;
   height: 50%;
 }
-
+.sect{
+  width: 100%;
+  background-color: unset;
+}
 #username{
   height: 50px;
   width: 412px;
@@ -74,6 +77,10 @@ a {
   margin-top: 10px;
   display: inline-block;
   transition: color 0.3s ease;
+  position: relative;
+  bottom: 25px;
+  left: 100px;
+  font-weight: bold;
 }
 
 a:hover {
@@ -81,11 +88,11 @@ a:hover {
 }
 
 h1{
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   position: absolute;
-  transform: translate(175px, -252px);
+  transform: translate(155px, -140px);
   color: #333;
   margin-bottom: 20px;
 }
