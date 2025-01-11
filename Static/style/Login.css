@@ -23,7 +23,7 @@ body{
   justify-content: center;
   align-items: center;
   position: relative;
-  left: 460px;
+  left: 500px;
   margin-top: 90px;
   border: solid, 5px, white;
   bottom: 50px;
@@ -35,8 +35,9 @@ body{
   width: 412px;
   border: solid 5px rgba(255, 255, 255, 0.4);
   position: absolute;
-  transform: translate(-137px, -100px);
+  transform: translate(-215px, -100px);
   box-shadow: 0px 0px 10px black;
+  border-radius: 25px;
 }
 
 #pass{
