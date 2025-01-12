@@ -115,11 +115,11 @@ body {
   display: block;
   text-align: center;
   position: relative;
-  font-size: 10px;
+  font-size: 20px;
   font-family: fangsong;
   filter: drop-shadow(2px 3px 0px black);
   position:absolute;
-  transform: translate(-200px, 50px);
+  transform: translate(260px, 390px);
 }
 
 .go-to:hover {
