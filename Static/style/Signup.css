@@ -124,3 +124,7 @@ body {
 .go-to:hover {
   text-decoration: underline;
 }
+
+.helptext, p, li{
+  color: black;
+}
