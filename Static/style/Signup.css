@@ -110,14 +110,13 @@ body {
 }
 
 .go-to {
-  color:white;
+  color:#3700b3;
   text-decoration: none;
   display: block;
   text-align: center;
   position: relative;
   font-size: 20px;
   font-family: fangsong;
-  filter: drop-shadow(2px 3px 0px black);
   position:absolute;
   transform: translate(260px, 390px);
 }
