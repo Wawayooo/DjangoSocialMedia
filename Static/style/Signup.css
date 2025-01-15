@@ -140,5 +140,5 @@ body {
 }
 
 #CreateAccBtn:hover{
-  
+  background: linear-gradient(45deg, #fc5c7d, #6a82fb);
 }
